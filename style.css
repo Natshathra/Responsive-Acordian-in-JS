@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional: Add background color */
+}
+
+.accordion-container {
+  width: 550px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.accordion-toggle {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background: #035d18;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #048020;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+.accordion-toggle h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.accordion-toggle i {
+  font-size: 1rem;
+}
+
+.accordion-toggle.active {
+  background-color: #048020;
+}
+
+.accordion-toggle.active i {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-content {
+  padding: 0 1rem;
+  background-color: #e7e6e6;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-content p {
+  font-size: 1.1rem;
+}
+
+.accordion-content.active {
+  max-height: 10rem;
+  padding: 1rem;
+}
